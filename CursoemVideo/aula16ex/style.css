@@ -1,0 +1,28 @@
+body {
+    background: #3f83d6;
+    color: white;
+    font: normal 15pt Arial;
+    text-align: center;
+}
+
+header {
+    
+}
+
+section {
+    background: white;
+    color: black;
+    font-size: 16pt;
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+select#listaf {
+    width: 150px;
+}
+
+footer {
+    font-size: 12pt;
+}
