@@ -1,18 +1,6 @@
-class Cliente {
-    nome
-    cpf
-}
+import {Cliente} from "./Cliente.js"
+import {ContaCorrente} from "./ContaCorrente.js"
 
-class ContaCorrente {
-    agencia
-    saldo
-
-    sacar(valor) {
-        if(this.saldo >= valor){ 
-            this.saldo -= valor
-        }/* o this serve para falar que é dessa conta corrente (a conta corrente da qual a função está dentro) */
-    }
-}
 
 const cliente1 = new Cliente()
 cliente1.nome = "Ricardo"
@@ -24,14 +12,12 @@ cliente2.cpf = 88822233309
 
 const contaCorrenteRicardo = new ContaCorrente()
 contaCorrenteRicardo.agencia = 1001
-contaCorrenteRicardo.saldo = 0
 
-console.log(contaCorrenteRicardo.saldo)
-contaCorrenteRicardo.saldo = 100
-console.log(contaCorrenteRicardo.saldo)
-contaCorrenteRicardo.sacar(200)
+contaCorrenteRicardo.depositar(-100)
+contaCorrenteRicardo.depositar(100)
+contaCorrenteRicardo.depositar(100)
+
+const valorSacado = contaCorrenteRicardo.sacar(50)
+console.log(valorSacado)
  
-
-console.log(contaCorrenteRicardo.saldo)
-console.log(cliente1)
-console.log(cliente2)
+console.log(contaCorrenteRicardo)
